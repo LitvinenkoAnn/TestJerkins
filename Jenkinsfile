@@ -30,11 +30,16 @@ pipeline {
                 '''
             }
             post {
-                success {
-                    archiveArtifacts(artifacts: 'homepage-*.png', followSymlinks: false)
-                    sh 'rm -rf *.png'
-                }
-            }
+    success {
+        echo 'Тесты успешно выполнены!'
+    }
+    failure {
+        echo 'Ошибка при выполнении тестов'
+    }
+    always {
+        deleteDir() // Удаление рабочей директории после выполнения конвейера
+    }
+}
         }
     }
 }
