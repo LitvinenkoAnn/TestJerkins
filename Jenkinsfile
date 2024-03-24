@@ -16,7 +16,7 @@ pipeline {
     stage('test') {
       steps {
         sh '''
-        npm run smoke
+        npm run test:promova
         '''
       }
       post {
