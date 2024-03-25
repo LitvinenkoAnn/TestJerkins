@@ -17,7 +17,7 @@
     "tests:study:list": "playwright test --config=study.config.ts --reporter=list",
     "tests:study:line": "playwright test --config=study.config.ts --reporter=line",
     "smoke": "playwright test --config=datasets.config.ts",
-    "test:promova": "node tests/PromovaTest/LoginDataPromovaTEST.js"
+    "test:promova": "node tests/PromovaTest/LoginDataPromovaTEST.js --headless"
 
   },
   "keywords": [],
