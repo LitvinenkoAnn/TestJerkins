@@ -28,7 +28,7 @@ let negativeLoginData = [
 
 negativeLoginData.forEach(({ email, password, result, locator }) => {
   test("Log in check", async () => {
-    const browser = await chromium.launch({ headless: false })
+    const browser = await chromium.launch({ headless: true })
     const page = await browser.newPage()
     let loginPage = new LoginPage(page)
     await loginPage.doLogin(email, password, result, locator)
